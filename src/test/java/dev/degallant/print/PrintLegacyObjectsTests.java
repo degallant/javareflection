@@ -43,6 +43,7 @@ public class PrintLegacyObjectsTests {
                 Date.from(Instant.parse("2007-12-03T10:15:30.00-04:00"))
         );
 
+        //the last argument, the price field, is in cents, but we want to display it in full value like 50.00
         var product = new Product("ProductA", "description A", 5000);
 
         var order = new Order(customer, "234902342309", product);
@@ -51,6 +52,9 @@ public class PrintLegacyObjectsTests {
 
         var customerString = "Customer[code=9287498327493423, name=Jhon Doe, registrationDate=2007-12-03]";
         var productString = "Product[name=ProductA, description=description A, price=50.00]";
+
+        //the problem here is that the customer and product objects within the order object are not getting parsed to
+        //their string representations. Also the price field from the product object needs to be formatted.
         var expected = "Order[customer=" + customerString + ", code=234902342309, product=" + productString + "]";
         assertEquals(expected, parsed);
 
