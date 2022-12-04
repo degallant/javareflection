@@ -67,3 +67,7 @@ The ``ObjectParser`` class works fine with a `Customer` class from the legacy li
 Your goal is to make the test case pass by only changing the implementation of `ObjectParser` class.
 
 Checkout ``src/test/java/dev/degallant/print/PrintLegacyObjectsTests.java`` class for more details.
+
+# Solution
+
+In case you got stuck or are being lazy, checkout the solution in the ``solution`` branch.
