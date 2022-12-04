@@ -65,3 +65,5 @@ There is still a problem with this code. On test suite ``src/test/java/dev/degal
 The ``ObjectParser`` class works fine with a `Customer` class from the legacy library, but when we try to parse an `Order` type object, the output is still not what we expect.
 
 Your goal is to make the test case pass by only changing the implementation of `ObjectParser` class.
+
+Checkout ``src/test/java/dev/degallant/print/PrintLegacyObjectsTests.java`` class for more details.
